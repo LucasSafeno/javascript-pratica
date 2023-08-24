@@ -14,21 +14,22 @@
 </head>
 <body>
     <div class="todo-container">
-        <header>
+        <div class="todo-header">
             <h1>Todo Avançado</h1>
-        </header>
+        </div>
+            
 
-        <form ction="" id="todo-form">
+        <form id="todo-form">
             <p>Adicione sua tarefa:</p>
             <div class="form-control">
-                <input type="text" name="todo-input" id="todo-input" placeholder="O que você vai fazer? ">
+                <input type="text" name="todo-input" id="todo-input" placeholder="O que você irá fazer ?" >
                 <button type="submit">
                     <i class="fa-thin fa-plus"></i>
                 </button>
             </div>
         </form>
 
-        <form id="edit-form">
+        <form id="edit-form" class="hide">
             <p>Edite sua tarefa:</p>
             <div class="form-control">
                 <input type="text" name="edit-input" id="edit-input">
@@ -42,7 +43,7 @@
         </form>
 
         <div id="toolbar">
-            <div class="search">
+            <div id="search">
                 <h4>Pesquisar:</h4>
                 <form>
                     <input type="text" name="search-input" id="search-input" placeholder="Buscar">
@@ -52,7 +53,7 @@
                 </form>
             </div>
 
-            <div class="filter">
+            <div id="filter">
                 <h4>Filtrar:</h4>
                 <select name="" id="filter-select">
                     <option value="all">Todos</option>
@@ -64,7 +65,7 @@
         </div> <!-- toobar-->
 
         <div id="todo-list">
-            <div class="todo">
+            <div class="todo done">
                 <h3>Estou fazendo alguma coisa</h3>
                 <button class="finish-todo">
                     <i class="fa-solid fa-check"></i>
