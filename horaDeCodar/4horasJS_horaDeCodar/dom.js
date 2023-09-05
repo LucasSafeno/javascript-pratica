@@ -78,4 +78,57 @@ document.body.removeChild(elementoPorId)
 // eventos
 
 
+// click
+const botao =   document.querySelector("button")
+
+botao.addEventListener("click", function(){
+    console.log("botao clicado");
+})
+
+
+//mouse
+const elemento5 = document.querySelector("#meuFormulario")
+elemento5.addEventListener("mouseover", function(){
+    console.log("mouse passou aqui")
+})
+
+
+// teclado
+const campoInput = document.querySelector("#meuInput")
+campoInput.addEventListener("keydown", function(){
+    console.log("tecla pressionada")
+})
+
+
+// formulario
+const form = document.querySelector("form")
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    
+    console.log("Formulario enviado")
+})
+
+
+// propagação de eventos
+document.querySelector("#elementoPai").addEventListener("click", function(event){
+    console.log("Click capturado")
+})
+
+document.querySelector("#elementoFilho").addEventListener("click", function(event){
+   // event.stopPropagation();
+    console.log("Elemento Filho")
+})
+
+document.querySelector("#meuLink").addEventListener("click", function(event){
+    event.preventDefault();
+    console.log("Clicou no link")
+})
+
+
+// delegação de eventos
+document.querySelector("#elementoPai").addEventListener("click", function(event){
+    if(event.target.matches(".classeDosFilhos")){
+        console.log("Evento delegado para o filho")
+    }
+})
 
