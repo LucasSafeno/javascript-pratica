@@ -33,7 +33,7 @@ class Conta{
 
    jurosDeAversario(){
     let juros = (this.saldoCP * this.juros) / 100
-    this.saldoCP += juros;
+    this.saldoCP += juros
    }
 } // conta
 
