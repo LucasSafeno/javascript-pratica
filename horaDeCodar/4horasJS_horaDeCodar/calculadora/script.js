@@ -59,7 +59,20 @@ function calcula(){
         case "+":
             resultado = operandoAnterior + operandoAtual;
             break;
+        case "-":
+            resultado = operandoAnterior - operandoAtual;
+            break;
+        case "*":
+            resultado = operandoAnterior * operandoAtual;
+            break;
+        case "/":
+            resultado = operandoAnterior / operandoAtual;
+            break;
     }
+    operacaoAtual = String(resultado);
+    valorAnterior = operacaoAtual;
+    calculando = true;
+    atualizaDisplay()
 }
 // Eventos
 botaoPonto.addEventListener("click", inserePonto)
